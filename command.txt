@@ -1,0 +1,69 @@
+git add ./--all
+
+git add -p <file> <-seperating the file into pieces
+   into hunk
+    y - stage this hunk
+    n - do not stage this hunk
+    q - quit; do not stage this hunk or any of the remaining ones
+    a - stage this hunk and all later hunks in the file
+    d - do not stage this hunk or any of the later hunks in the file
+    / - search for a hunk matching the given regex
+    e - manually edit the current hunk
+    ? - print help
+
+git commit -m 'description'  [-a <-if been trakcked,commit all ] [--amend <-ammend the prveious commit] [--allow-empty<-allow empty description]
+
+(.gitignore)
+可加入.gitignore檔, 內文寫想忽略的
+    "\" 用來做分行
+    "!" 加在檔案前，反忽略
+    "*.abc" 所有符合abc的檔
+    "a/**/b" 所有符合a/~/b之間的directory
+    
+    git clean -fx 强制刪除忽略的檔案
+
+(log)
+git log [--oneline] [--author="abc\|cde" ("\" slash required)]  [--grep="pattern" <- commit description]
+
+git log [-S "content"] [--since= ] [--untill= ] [--after= ] [-p <-see the difference between the commit]
+
+git log [-p <- see the commited file difference]  
+
+(rm)
+git rm --cached (delete the cureent tracked not regarding the working tree)
+
+git rm [commit_id or file] (commit the rm change to make it complete or abort all regarding  the working tree)
+    ->( git checkout -- <file> )  dicarding changes in working directory
+
+
+
+(blame)
+git blame <file> [-L(line) start_num, end_num] <-show the content in which the revision been commited by whom 
+
+(reflog)
+git reflog <-  the procedure you made
+
+(branch)
+git branch <name>
+
+git branch -m <name1> <name1_replacement>
+
+git checkout -b <name> <- checkout to the new branch that is just created 
+
+git checkout <branch_name>
+
+(rebase)
+git rebase -i(interactive) <commit_id> 
+    [edit] , stop form this ,edit then submit
+    [squash] , combine the prveious commit
+
+(revert)
+git revert (delete the previos commit)
+
+(tag)
+tag 
+
+
+
+    
+
